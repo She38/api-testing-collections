@@ -1,0 +1,72 @@
+{
+    "info": {
+      "_postman_id": "365702c2-943f-4a93-844d-a9f023fbee70",
+      "name": "DaData API (cleaned)",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+      "_exporter_id": "39456497"
+    },
+    "item": [
+      {
+        "name": "Coordinate",
+        "item": [
+          {
+            "name": "New Request",
+            "request": {
+              "auth": {
+                "type": "bearer",
+                "bearer": [
+                  {
+                    "key": "token",
+                    "value": "{{api_token}}",
+                    "type": "string"
+                  }
+                ]
+              },
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "type": "text"
+                },
+                {
+                  "key": "Accept",
+                  "value": "application/json",
+                  "type": "text"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Token {{api_token}}",
+                  "type": "text"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{ \"lat\": 55.878, \"lon\": 37.653 }",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "https://suggestions.dadata.ru/suggestions/api/4_1/rs/geolocate/address",
+                "protocol": "https",
+                "host": ["suggestions", "dadata", "ru"],
+                "path": ["suggestions", "api", "4_1", "rs", "geolocate", "address"]
+              }
+            },
+            "response": []
+          }
+        ]
+      }
+    ],
+    "variable": [
+      {
+        "key": "api_token",
+        "value": "",
+        "type": "string"
+                            }
+                        ]
+                    }
+					
