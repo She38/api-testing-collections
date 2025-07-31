@@ -1,0 +1,107 @@
+{
+	"info": {
+	  "_postman_id": "80051a06-d9de-448d-ab9f-bf44f97094e1",
+	  "name": "ВТБ API (Cleaned)",
+	  "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+	  "_exporter_id": "39456497"
+	},
+	"item": [
+	  {
+		"name": "Создать заказ",
+		"request": {
+		  "auth": {
+			"type": "basic",
+			"basic": [
+			  {
+				"key": "username",
+				"value": "{{username}}",
+				"type": "string"
+			  },
+			  {
+				"key": "password",
+				"value": "{{password}}",
+				"type": "string"
+			  }
+			]
+		  },
+		  "method": "POST",
+		  "header": [
+			{
+			  "key": "Content-Type",
+			  "value": "application/x-www-form-urlencoded",
+			  "type": "text"
+			}
+		  ],
+		  "body": {
+			"mode": "urlencoded",
+			"urlencoded": [
+			  {
+				"key": "userName",
+				"value": "{{username}}",
+				"type": "text"
+			  },
+			  {
+				"key": "password",
+				"value": "{{password}}",
+				"type": "text"
+			  },
+			  {
+				"key": "orderNumber",
+				"value": "{{orderNumber}}",
+				"type": "text"
+			  },
+			  {
+				"key": "amount",
+				"value": "{{amount}}",
+				"type": "text"
+			  },
+			  {
+				"key": "returnUrl",
+				"value": "https://example.com/success",
+				"type": "text"
+			  },
+			  {
+				"key": "failUrl",
+				"value": "https://example.com/fail",
+				"type": "text"
+			  },
+			  {
+				"key": "email",
+				"value": "example@example.com",
+				"type": "text"
+			  },
+			  {
+				"key": "clientId",
+				"value": "{{clientId}}",
+				"type": "text"
+			  },
+			  {
+				"key": "description",
+				"value": "{{description}}",
+				"type": "text"
+			  },
+			  {
+				"key": "taxSystem",
+				"value": "0",
+				"type": "text"
+			  }
+			]
+		  },
+		  "url": {
+			"raw": "https://vtb.rbsuat.com/payment/rest/register.do",
+			"protocol": "https",
+			"host": [
+			  "vtb",
+			  "rbsuat",
+			  "com"
+			],
+			"path": [
+			  "payment",
+			  "rest",
+			  "register.do"
+			]
+		  }
+		}
+	  }
+	]
+  }
